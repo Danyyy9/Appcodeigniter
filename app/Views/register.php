@@ -37,16 +37,18 @@
                                 <input type="password" class="form-control" name="password_confirm" id="password_confirm" value="">
                             </div>
                         </div>
-                        <?php if (isset($validation)) : ?>
+
+                        
+                        <?php if (isset($validation)): ?>
                             <div class="col-12">
                                 <div class="alert alert-danger" role="alert">
                                     <?= $validation->listErrors() ?>
                                 </div>
-
                             </div>
-                        <?php endif; ?>
-
+                            <?php endif; ?>
                     </div>
+
+
                     <div class="row">
                         <div class="col-12 col-sm-4">
                             <button type="submit" class="btn btn-primary">Register</button>

@@ -4,7 +4,7 @@
             <div class="container">
                 <h3>Login</h3>
                 <hr>
-                <?php if (session()->get('succesful')) : ?>
+                <?php if (session()->get('success')) : ?>
                     <div class="alert alert-success" role="alert">
                         <?= session()->get('success') ?>
 

@@ -24,13 +24,13 @@ class Users extends BaseController
 		if ($this->request->getMethod() == 'post') {
 			//Let's do some validation rules
 			$rules = [
-				'firstname' => 'required|min_lenght[3]|max_lenght[20]',
+				'firstname' => 'required|min_length[3]|max_lenght[20]',
 				'lastname' => 'required|min_lenght[3]|max_lenght[20]',
 				'email' => 'required|min_lenght[6]|max_lenght[50]|valid_mail|is_unique[users.email]',
 				'password' => 'required|min_lenght[8]|max_lenght[255]',
 				'password_confirm' => 'matches[password]',
 			];
-			if (!$this->validate($rules)) {
+			if (! $this->validate($rules)) {
 				$data['validation'] = $this->validator;
 			} else {
 				$model = new UserModel();
